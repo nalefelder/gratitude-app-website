@@ -3,7 +3,7 @@
   --primary: #6C63FF;
   --primary-light: #A5A0FF;
   --primary-dark: #4A42D4;
-  --bg: #FBF8F4;
+  --bg: #FFFFFF;
   --surface: #FFFFFF;
   --text: #2D2D3A;
   --text-secondary: #7A7A8E;
@@ -219,7 +219,7 @@ section { padding: 80px 0; }
   background: var(--surface);
   border-radius: var(--radius-card);
   padding: 28px 24px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -250,6 +250,19 @@ section { padding: 80px 0; }
   color: var(--text-secondary);
   line-height: 1.5;
 }
+
+/* Feature card colours */
+.feature-card:nth-child(1)  { background: #f9f5ff; border-color: rgba(167, 139, 250, 0.12); }
+.feature-card:nth-child(2)  { background: #f0fdf4; border-color: rgba(134, 239, 172, 0.12); }
+.feature-card:nth-child(3)  { background: #fffbeb; border-color: rgba(252, 211, 77, 0.12); }
+.feature-card:nth-child(4)  { background: #eff6ff; border-color: rgba(147, 197, 253, 0.12); }
+.feature-card:nth-child(5)  { background: #fff1f2; border-color: rgba(253, 164, 175, 0.12); }
+.feature-card:nth-child(6)  { background: #f7fee7; border-color: rgba(190, 242, 100, 0.12); }
+.feature-card:nth-child(7)  { background: #fdf4ff; border-color: rgba(232, 170, 253, 0.12); }
+.feature-card:nth-child(8)  { background: #fff5f7; border-color: rgba(251, 182, 206, 0.12); }
+.feature-card:nth-child(9)  { background: #fff7ed; border-color: rgba(253, 186, 116, 0.12); }
+.feature-card:nth-child(10) { background: #f0fdf4; border-color: rgba(134, 239, 172, 0.12); }
+.feature-card:nth-child(11) { background: #f0fdfa; border-color: rgba(94, 234, 212, 0.12); }
 
 /* Feature icon colours */
 .icon-gratitude  { background: #ede9ff; color: var(--primary); }
