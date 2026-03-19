@@ -146,35 +146,62 @@
 </section>
 
 <!-- ===== Screenshots ===== -->
-<section id="screenshots">
+<section id="screenshots" style="background: linear-gradient(180deg, #f8f7ff 0%, #fff 100%);">
   <div class="container">
     <h2 class="section-title">See it in action</h2>
     <p class="section-subtitle">A glimpse at what's inside.</p>
 
     <div class="screenshots-row">
-      <div class="screenshot-item">
-        <img src="screenshot-1-home.png" alt="Daily Gratitude home screen with streak tracking and AI insights" loading="lazy">
-        <span class="screenshot-label">Daily Gratitude</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="screenshot-2-habits.png" alt="Habit tracker with weekly progress view" loading="lazy">
-        <span class="screenshot-label">Habit Tracker</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="screenshot-4-stats.png" alt="Stats and insights dashboard with mood breakdown and word cloud" loading="lazy">
-        <span class="screenshot-label">Stats & Insights</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="screenshot-5-nutrition.png" alt="Nutrition tracker with macro tracking and meal logging" loading="lazy">
-        <span class="screenshot-label">Nutrition Tracker</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="screenshot-6-period.png" alt="Period tracker with cycle calendar and predictions" loading="lazy">
-        <span class="screenshot-label">Period Tracker</span>
-      </div>
-      <div class="screenshot-item">
-        <img src="screenshot-7-sport.png" alt="Climbing tracker with session logs, recovery and injury tracking" loading="lazy">
-        <span class="screenshot-label">Climbing Tracker</span>
+      <div class="screenshots-track">
+        <div class="screenshot-item">
+          <img src="screenshot-1-home.png" alt="Daily Gratitude home screen with streak tracking and AI insights">
+          <span class="screenshot-label">Daily Gratitude</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-2-habits.png" alt="Habit tracker with weekly progress view">
+          <span class="screenshot-label">Habit Tracker</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-4-stats.png" alt="Stats and insights dashboard with mood breakdown and word cloud">
+          <span class="screenshot-label">Stats & Insights</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-5-nutrition.png" alt="Nutrition tracker with macro tracking and meal logging">
+          <span class="screenshot-label">Nutrition Tracker</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-6-period.png" alt="Period tracker with cycle calendar and predictions">
+          <span class="screenshot-label">Period Tracker</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-7-sport.png" alt="Climbing tracker with session logs, recovery and injury tracking">
+          <span class="screenshot-label">Climbing Tracker</span>
+        </div>
+        <!-- Duplicated for seamless loop -->
+        <div class="screenshot-item">
+          <img src="screenshot-1-home.png" alt="Daily Gratitude home screen">
+          <span class="screenshot-label">Daily Gratitude</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-2-habits.png" alt="Habit tracker">
+          <span class="screenshot-label">Habit Tracker</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-4-stats.png" alt="Stats and insights">
+          <span class="screenshot-label">Stats & Insights</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-5-nutrition.png" alt="Nutrition tracker">
+          <span class="screenshot-label">Nutrition Tracker</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-6-period.png" alt="Period tracker">
+          <span class="screenshot-label">Period Tracker</span>
+        </div>
+        <div class="screenshot-item">
+          <img src="screenshot-7-sport.png" alt="Climbing tracker">
+          <span class="screenshot-label">Climbing Tracker</span>
+        </div>
       </div>
     </div>
   </div>
@@ -201,6 +228,38 @@
     </div>
   </div>
 </footer>
+
+<!-- ===== Screenshot Lightbox ===== -->
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="" alt="">
+</div>
+
+<script>
+(function() {
+  const overlay = document.getElementById('lightbox');
+  const lbImg = overlay.querySelector('img');
+  const lbClose = overlay.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.screenshot-item img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      lbImg.src = this.src;
+      lbImg.alt = this.alt;
+      overlay.classList.add('active');
+    });
+  });
+
+  overlay.addEventListener('click', function(e) {
+    if (e.target !== lbImg) {
+      overlay.classList.remove('active');
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') overlay.classList.remove('active');
+  });
+})();
+</script>
 
 </body>
 </html>
