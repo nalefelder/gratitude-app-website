@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Gratitude Performance Tracker</title>
-  <meta name="description" content="Privacy Policy for Gratitude Performance Tracker mobile application.">
+  <title>Privacy Policy — Journex</title>
+  <meta name="description" content="Privacy Policy for the Journex mobile application. Compliant with the Australian Privacy Act 1988.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .policy-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    .policy-table th, .policy-table td { border: 1px solid #e2e8f0; padding: 10px 12px; text-align: left; }
+    .policy-table th { background: #f5f3ff; color: #6C5CE7; font-weight: 600; }
+    .policy-callout { background: #f5f3ff; border-left: 4px solid #6C5CE7; padding: 14px 18px; margin: 18px 0; border-radius: 6px; font-size: 15px; }
+  </style>
 </head>
 <body>
 
 <!-- ===== Nav ===== -->
 <nav class="nav">
   <div class="container">
-    <a href="index.html" class="nav-brand"><img src="logo.png" alt="Gratitude Performance Tracker logo" class="nav-logo">journex.io</a>
+    <a href="index.html" class="nav-brand"><img src="logo.png" alt="Journex logo" class="nav-logo">journex.io</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
     </ul>
@@ -27,83 +33,182 @@
   <div class="container" style="max-width:760px;">
     <a href="index.html" class="policy-back">&larr; Back to home</a>
     <h1>Privacy Policy</h1>
-    <p class="policy-date">Last updated: March 17, 2026</p>
+    <p class="policy-date">Last updated: April 9, 2026 &nbsp;|&nbsp; Version 1.0</p>
 
-    <p>This Privacy Policy describes how Gratitude Performance Tracker ("the App", "we", "us", or "our") collects, uses, and protects your personal information when you use our mobile application.</p>
+    <p>Journex ("the App", "we", "us", or "our") is committed to protecting your personal information in accordance with the <strong>Australian Privacy Act 1988</strong> (Cth) and the <strong>Australian Privacy Principles</strong> (APPs). This policy explains how we collect, use, disclose, and protect your information.</p>
 
+    <p>By creating an account, you confirm that you have read and agree to this Privacy Policy. You must be <strong>16 years of age or older</strong> to use Journex.</p>
+
+    <!-- APP 1, 3, 5: Collection and notification -->
     <h2>1. Information We Collect</h2>
-    <p>We collect the following types of information to provide and improve the App:</p>
+
+    <h3>Information you provide</h3>
+    <table class="policy-table">
+      <tr><th>Category</th><th>Data types</th><th>Sensitivity</th></tr>
+      <tr><td>Account</td><td>Name, email address, profile photo</td><td>Personal</td></tr>
+      <tr><td>Journal entries</td><td>Gratitude text, mood, photos, date</td><td>Personal</td></tr>
+      <tr><td>Reflections</td><td>What went well, what didn't, improvements</td><td>Personal</td></tr>
+      <tr><td>Habits &amp; Goals</td><td>Habit names, completions, goal progress</td><td>Personal</td></tr>
+      <tr><td>Nutrition</td><td>Food names, calories, macros, water intake</td><td>Health</td></tr>
+      <tr><td>Sport &amp; Fitness</td><td>Session type, duration, energy, fatigue, notes</td><td>Health</td></tr>
+      <tr><td>Injury tracking</td><td>Injury name, body part, severity, pain levels, rehab progress</td><td>Health</td></tr>
+      <tr><td>Period tracking</td><td>Cycle dates, flow, symptoms, notes</td><td>Sensitive health</td></tr>
+      <tr><td>Daily recovery</td><td>Sleep, soreness, hydration, body weight</td><td>Health</td></tr>
+      <tr><td>Weight tracking</td><td>Body weight, goal weight</td><td>Health</td></tr>
+      <tr><td>Social data</td><td>Friend connections, shared entries, messages</td><td>Personal</td></tr>
+    </table>
+
+    <div class="policy-callout">
+      <strong>Sensitive information:</strong> Under the Privacy Act, health information (including period tracking, injury data, body weight, and nutrition data) is classified as "sensitive information" and receives a higher standard of protection. We only collect this data with your explicit consent and for the sole purpose of providing the App's tracking features.
+    </div>
+
+    <h3>Information collected automatically</h3>
     <ul>
-      <li><strong>Account information</strong> — email address and display name used for authentication</li>
-      <li><strong>Journal entries</strong> — gratitude entries, reflections, and associated mood ratings</li>
-      <li><strong>Habit &amp; goal data</strong> — habits you track and goals you set, along with your progress</li>
-      <li><strong>Sport &amp; climbing sessions</strong> — training logs, climbing grades, and injury records</li>
-      <li><strong>Nutrition &amp; food logs</strong> — meals, macro tracking data, and barcode scan results</li>
-      <li><strong>Health &amp; wellness metrics</strong> — sleep quality, hydration levels, and period/cycle tracking</li>
-      <li><strong>Photos</strong> — images you attach to journal entries or your profile</li>
-      <li><strong>Social data</strong> — friend connections, shared entries, and messages</li>
+      <li><strong>Device tokens:</strong> Firebase Cloud Messaging tokens for push notifications (if you enable reminders)</li>
+      <li><strong>Timezone:</strong> Detected from your device for reminder scheduling</li>
     </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>Your information is used to:</p>
+    <h3>Information we do NOT collect</h3>
     <ul>
-      <li>Provide, maintain, and improve the App's features</li>
-      <li>Display your personal statistics, charts, streaks, and insights</li>
-      <li>Enable social features such as friend invites and shared entries</li>
-      <li>Process your subscription through our payment provider</li>
-      <li>Send important service-related notifications</li>
+      <li>We do not use analytics or tracking SDKs (no Google Analytics, no Crashlytics)</li>
+      <li>We do not collect location data</li>
+      <li>We do not record audio (the app does not use your microphone)</li>
+      <li>We do not access your contacts, calendar, or other apps</li>
     </ul>
+
+    <!-- APP 6: Use and disclosure -->
+    <h2>2. How We Use Your Information</h2>
+    <table class="policy-table">
+      <tr><th>Purpose</th><th>Data used</th><th>Legal basis (APP)</th></tr>
+      <tr><td>Core app features (journaling, tracking, analytics)</td><td>All data you enter</td><td>Primary purpose of collection (APP 6.1)</td></tr>
+      <tr><td>AI-powered weekly insights (opt-in only)</td><td>Journal entries, reflections, habits, sport sessions, food names, sleep/hydration/soreness (see Section 4 for exclusions)</td><td>Explicit consent (APP 6.1, APP 3.3)</td></tr>
+      <tr><td>Social features (sharing entries with friends)</td><td>Entries you choose to share, display name, profile photo</td><td>Consent via explicit sharing action (APP 6.1)</td></tr>
+      <tr><td>Push notifications</td><td>FCM device tokens</td><td>Consent via enabling reminders (APP 6.1)</td></tr>
+      <tr><td>Subscription management</td><td>Anonymous user ID (no health data)</td><td>Contractual necessity (APP 6.1)</td></tr>
+    </table>
+
+    <p>We do not use your data for advertising, profiling, or any purpose other than those listed above.</p>
 
     <h2>3. Data Storage &amp; Security</h2>
-    <p>Your data is stored using <strong>Google Firebase</strong> services (Firestore database and Cloud Storage for files/photos). All data is encrypted in transit using TLS/SSL. Firebase infrastructure provides encryption at rest for stored data.</p>
-    <p>We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, or destruction.</p>
-
-    <h2>4. Third-Party Services</h2>
-    <p>The App uses the following third-party services:</p>
+    <p>We implement the following security measures to protect your information:</p>
     <ul>
-      <li><strong>Firebase Authentication</strong> — for secure account sign-in and management</li>
-      <li><strong>Firebase Firestore</strong> — for cloud database storage of your app data</li>
-      <li><strong>Firebase Cloud Storage</strong> — for storing photos and file attachments</li>
-      <li><strong>RevenueCat</strong> — for managing in-app subscriptions and purchases</li>
-      <li><strong>Open Food Facts API</strong> — for retrieving nutritional information via barcode scanning (no personal data is sent to this service)</li>
+      <li><strong>Encryption in transit:</strong> All data transmitted between the app and our servers uses HTTPS/TLS encryption.</li>
+      <li><strong>Encryption at rest:</strong> Data stored in Firebase is encrypted at rest using Google's default encryption. Sensitive health data cached on your device is encrypted using a key stored in your device's secure enclave (iOS Keychain / Android Keystore).</li>
+      <li><strong>Access isolation:</strong> Firestore security rules ensure each user can only read and write their own data. All sharing and social features are validated server-side.</li>
+      <li><strong>Server-side validation:</strong> All sensitive operations (sharing entries, claiming invites, creating challenges, deleting accounts) are enforced through server-side Cloud Functions with input validation and rate limiting.</li>
+      <li><strong>Audit logging:</strong> Sensitive account actions (account deletion, entry sharing, invite claims) are logged server-side for breach assessment purposes.</li>
+      <li><strong>Minimal permissions:</strong> The app only requests camera permission (for food barcode scanning and journal photos). No microphone, location, contacts, or other permissions are requested.</li>
     </ul>
-    <p>Each third-party service has its own privacy policy governing how they handle data. We encourage you to review their respective policies.</p>
 
-    <h2>5. Data Sharing</h2>
+    <!-- APP 8: Cross-border disclosure -->
+    <h2>4. Third-Party Services &amp; Cross-Border Disclosure</h2>
     <p><strong>We do not sell, rent, or share your personal data with advertisers or marketing companies.</strong></p>
-    <p>Your data may only be shared in the following limited circumstances:</p>
+    <p>Your information is shared only with the following parties:</p>
+
+    <table class="policy-table">
+      <tr><th>Third party</th><th>Location</th><th>Purpose</th><th>Data shared</th></tr>
+      <tr><td>Google Firebase (Firestore, Storage, Auth, Cloud Functions)</td><td>United States</td><td>Data storage, authentication, server-side processing</td><td>All account and app data</td></tr>
+      <tr><td>Anthropic (Claude AI)</td><td>United States</td><td>AI weekly insights generation (opt-in only)</td><td>Journal text, reflections, habits, sport sessions, food names, sleep/hydration/soreness. <strong>Excludes:</strong> period data, body weight, alcohol intake, photos, macros</td></tr>
+      <tr><td>RevenueCat</td><td>United States</td><td>Subscription and purchase management</td><td>Anonymous user ID, purchase receipts. <strong>No health data.</strong></td></tr>
+      <tr><td>Open Food Facts API</td><td>France (non-profit)</td><td>Nutritional info via barcode scanning</td><td>Barcode number only. <strong>No personal data.</strong></td></tr>
+      <tr><td>Friends</td><td>N/A</td><td>Social sharing (your choice)</td><td>Only entries you explicitly share</td></tr>
+    </table>
+
+    <div class="policy-callout">
+      <strong>Cross-border disclosure (APP 8):</strong> Your data is stored and processed on servers in the United States by Google, and optionally processed by Anthropic (US). We take reasonable steps to ensure these recipients handle your data in compliance with the Australian Privacy Principles, including through their published data processing terms and contractual commitments.
+    </div>
+
+    <p>Your data may also be disclosed when required by law or to comply with legal process.</p>
+
+    <!-- AI Insights -->
+    <h2>5. AI-Powered Insights</h2>
+    <p>Journex offers optional AI-powered weekly insights, generated by Anthropic's Claude AI. This feature is <strong>opt-in only</strong> and disabled by default.</p>
+
+    <h3>What is sent to Anthropic</h3>
     <ul>
-      <li>With other users, when you explicitly choose to share entries or connect with friends</li>
-      <li>With third-party service providers listed above, solely to operate the App</li>
-      <li>When required by law or to comply with legal process</li>
+      <li>Journal entry text and mood</li>
+      <li>Reflection text (what went well, didn't go well, improvements)</li>
+      <li>Habit names and completions</li>
+      <li>Sport/climbing session details (type, duration, energy, fatigue)</li>
+      <li>Food names (without macros or serving quantities)</li>
+      <li>Sleep hours, hydration, soreness, perceived strength</li>
     </ul>
 
-    <h2>6. Health &amp; Sensitive Data</h2>
-    <p>The App collects certain health-related information including period/cycle tracking, sleep data, hydration metrics, and injury records. This data is:</p>
+    <h3>What is NOT sent to Anthropic</h3>
     <ul>
-      <li>Stored securely using the same protections as all other app data</li>
+      <li>Period tracking data (cycle dates, flow, symptoms)</li>
+      <li>Body weight</li>
+      <li>Alcohol consumption</li>
+      <li>Photos</li>
+      <li>Nutritional macros (calories, protein, carbs, fat)</li>
+      <li>Your name, email, or any account identifiers</li>
+    </ul>
+
+    <p>Anthropic processes this data solely to generate your insight and does not use it for model training on paid API tiers. You can opt out at any time in <strong>Settings</strong>, which takes effect immediately — no further data will be sent to Anthropic.</p>
+
+    <!-- APP 6: Health data -->
+    <h2>6. Health &amp; Sensitive Data</h2>
+    <p>The App collects certain health-related information including period/cycle tracking, sleep data, hydration metrics, body weight, and injury records. This data is:</p>
+    <ul>
+      <li>Classified as "sensitive information" under the Australian Privacy Act and given a higher standard of protection</li>
+      <li>Collected only with your explicit consent</li>
+      <li>Encrypted on your device using keys stored in the secure enclave (iOS Keychain / Android Keystore)</li>
       <li>Never shared with third parties for advertising or marketing purposes</li>
       <li>Only visible to you (and friends you explicitly share with)</li>
       <li>Deletable at any time through your account settings</li>
     </ul>
 
+    <!-- APP 12, 13: Access, correction, erasure -->
     <h2>7. Your Rights</h2>
-    <p>You have the right to:</p>
+    <p>Under the Australian Privacy Act, you have the right to:</p>
     <ul>
-      <li><strong>Access</strong> — request a copy of all personal data we hold about you</li>
-      <li><strong>Delete</strong> — delete your account and all associated data at any time</li>
-      <li><strong>Export</strong> — request an export of your data in a portable format</li>
-      <li><strong>Rectify</strong> — update or correct your personal information</li>
-      <li><strong>Withdraw consent</strong> — stop using the App and request data deletion</li>
+      <li><strong>Access (APP 12):</strong> All your data is viewable within the app at any time</li>
+      <li><strong>Correction (APP 13):</strong> You can edit journal entries (same-day), update your profile, and modify all tracking data directly in the app</li>
+      <li><strong>Deletion:</strong> Delete individual entries at any time, or delete your entire account and all associated data via <strong>Settings &gt; Delete Account</strong></li>
+      <li><strong>Opt out of AI insights:</strong> Disable AI insights at any time in Settings — this immediately stops all data processing by Anthropic</li>
+      <li><strong>Withdraw consent:</strong> Delete your account at any time, which removes all your data</li>
     </ul>
 
+    <p>When you delete your account, we delete:</p>
+    <ul>
+      <li>All Firestore documents (entries, reflections, habits, goals, nutrition, sport, injuries, period logs, recovery data, messages, insights, preferences)</li>
+      <li>All photos stored in Firebase Storage</li>
+      <li>All shared entries you authored</li>
+      <li>Your friend connections</li>
+      <li>Your Firebase Authentication account</li>
+    </ul>
+
+    <!-- APP 11.2: Retention -->
     <h2>8. Data Retention</h2>
-    <p>Your data is retained for as long as you maintain an active account. When you delete your account, all associated personal data is permanently deleted from our systems within 30 days. Anonymised, aggregated data that cannot identify you may be retained for analytical purposes.</p>
+    <p>Your data is retained for as long as your account is active, subject to the following automatic retention limits:</p>
 
-    <h2>9. Children's Privacy</h2>
-    <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information promptly.</p>
+    <table class="policy-table">
+      <tr><th>Data type</th><th>Retention period</th></tr>
+      <tr><td>Food log entries</td><td>2 years</td></tr>
+      <tr><td>Daily recovery records</td><td>2 years</td></tr>
+      <tr><td>Period log entries</td><td>3 years</td></tr>
+      <tr><td>Sport / climbing sessions</td><td>3 years</td></tr>
+      <tr><td>Weight log entries</td><td>3 years</td></tr>
+      <tr><td>Journal entries, reflections, habits, goals</td><td>Retained while account is active</td></tr>
+    </table>
 
-    <h2>10. GDPR Compliance (European Users)</h2>
+    <p>Records older than the retention period are automatically deleted on a weekly basis. You can delete individual entries at any time within the app.</p>
+
+    <!-- NDB scheme -->
+    <h2>9. Data Breach Notification</h2>
+    <p>In accordance with the <strong>Notifiable Data Breaches (NDB) scheme</strong> under Part IIIC of the Privacy Act, if we become aware of a data breach that is likely to result in serious harm to any individual, we will:</p>
+    <ul>
+      <li>Notify the <strong>Office of the Australian Information Commissioner (OAIC)</strong> as soon as practicable</li>
+      <li>Notify affected individuals as soon as practicable</li>
+      <li>Include in the notification: a description of the breach, the type of information involved, and recommended steps for affected individuals</li>
+    </ul>
+
+    <!-- Children -->
+    <h2>10. Children's Privacy</h2>
+    <p>Journex is not intended for children under the age of 16. We do not knowingly collect personal information from children under 16. Users must confirm they are 16 years or older during registration. If we become aware that we have collected data from a child under 16, we will delete the account and all associated data promptly.</p>
+
+    <!-- GDPR -->
+    <h2>11. GDPR Compliance (European Users)</h2>
     <p>If you are located in the European Economic Area (EEA), you have additional rights under the General Data Protection Regulation (GDPR), including:</p>
     <ul>
       <li>The right to data portability</li>
@@ -113,7 +218,8 @@
     </ul>
     <p>Our legal basis for processing your data is your consent (provided when you create an account) and the performance of the contract (providing the App's services to you).</p>
 
-    <h2>11. CCPA Compliance (California Users)</h2>
+    <!-- CCPA -->
+    <h2>12. CCPA Compliance (California Users)</h2>
     <p>If you are a California resident, the California Consumer Privacy Act (CCPA) grants you additional rights:</p>
     <ul>
       <li>The right to know what personal information is collected</li>
@@ -122,12 +228,20 @@
       <li>The right to non-discrimination for exercising your privacy rights</li>
     </ul>
 
-    <h2>12. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy within the App and updating the "Last updated" date above. Your continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
+    <!-- Changes -->
+    <h2>13. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you via an in-app notice or email. The "Last updated" date at the top of this page indicates when the policy was last revised. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
 
-    <h2>13. Contact Us</h2>
-    <p>If you have any questions or concerns about this Privacy Policy or your data, please contact us at:</p>
-    <p><strong>Email:</strong> tna.naomi@gmail.com</p>
+    <!-- Contact -->
+    <h2>14. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, wish to make a complaint, or want to exercise your rights, contact us at:</p>
+    <p><strong>Email:</strong> privacy@journex.io</p>
+
+    <p>If you are not satisfied with our response, you have the right to lodge a complaint with the <strong>Office of the Australian Information Commissioner (OAIC)</strong>:</p>
+    <ul>
+      <li>Website: <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">www.oaic.gov.au</a></li>
+      <li>Phone: 1300 363 992</li>
+    </ul>
 
   </div>
 </main>
@@ -135,7 +249,7 @@
 <!-- ===== Footer ===== -->
 <footer class="footer">
   <div class="container">
-    <p>&copy; 2026 Gratitude Performance Tracker. All rights reserved.</p>
+    <p>&copy; 2026 Journex. All rights reserved.</p>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="terms-of-service.html">Terms of Service</a>
