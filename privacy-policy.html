@@ -98,6 +98,7 @@
       <li><strong>Server-side validation:</strong> All sensitive operations (sharing entries, claiming invites, creating challenges, deleting accounts) are enforced through server-side Cloud Functions with input validation and rate limiting.</li>
       <li><strong>Audit logging:</strong> Sensitive account actions (account deletion, entry sharing, invite claims) are logged server-side for breach assessment purposes.</li>
       <li><strong>Minimal permissions:</strong> The app only requests camera permission (for food barcode scanning and journal photos). No microphone, location, contacts, or other permissions are requested.</li>
+      <li><strong>Secure development practices:</strong> Our source code is protected against unauthorised changes, and we automatically scan for accidentally committed credentials to help prevent security exposures.</li>
     </ul>
 
     <!-- APP 8: Cross-border disclosure -->
