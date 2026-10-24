@@ -3,70 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retro for Two: Support</title>
-  <meta name="description" content="Help and support for Retro for Two, the couple retrospective app.">
+  <title>Retro for Two: kind, regular check-ins for couples</title>
+  <meta name="description" content="Retro for Two is a couple retrospective app. Answer a few questions privately, talk them through together, agree on small actions and end on appreciation. Everything stays on your phone.">
+  <link rel="canonical" href="https://journex.io/retro-for-two/">
+  <meta property="og:title" content="Retro for Two">
+  <meta property="og:description" content="Kind, regular check-ins for a healthier relationship. Private by design.">
+  <meta property="og:image" content="https://journex.io/retro-for-two/icon.png">
+  <meta property="og:url" content="https://journex.io/retro-for-two/">
+  <link rel="icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Retro for Two",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "LifestyleApplication",
+    "description": "A couple retrospective app: private answers, a guided conversation, small agreed actions and appreciation, on a rhythm you choose.",
+    "publisher": { "@type": "Organization", "name": "Holistic Governance Pty Ltd" }
+  }
+  </script>
   <style>
-    .policy-callout { background: #fdf2f6; border-left: 4px solid #C2577A; padding: 14px 18px; margin: 18px 0; border-radius: 6px; font-size: 15px; }
-    .app-head { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
-    .app-head img { width: 64px; height: 64px; border-radius: 14px; }
+    /* Retro for Two uses its own rose palette on top of the shared journex.io styles. */
+    :root { --primary: #C2577A; --primary-light: #E07A9B; --primary-dark: #A9446A; }
+    .hero { background: linear-gradient(160deg, #fdf0f4 0%, #fff 50%, #fbf6f1 100%); }
+    .hero::before { background: radial-gradient(circle, rgba(194, 87, 122, 0.14) 0%, transparent 70%); }
+    .hero-logo { box-shadow: 0 8px 32px rgba(194, 87, 122, 0.25); }
+    .soon { display: inline-block; margin-top: 4px; padding: 10px 20px; border-radius: var(--radius-pill); background: #fdf0f4; color: var(--primary-dark); font-weight: 600; }
+    .hero-note { margin-top: 14px; font-size: 0.9rem; color: var(--text-secondary); }
+    .rft-features .feature-card { background: #fff; border: 1px solid #f1e4ea; }
+    .rft-features .feature-icon { background: #fdf0f4; }
+    /* Swipeable, not auto-scrolling: easier to read and kinder to motion-sensitive visitors. */
+    .shots { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 4px 24px; -webkit-overflow-scrolling: touch; }
+    .shots img { flex: 0 0 220px; width: 220px; border-radius: 18px; scroll-snap-align: center; box-shadow: 0 8px 28px rgba(120, 40, 70, 0.14); }
+    .privacy-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; text-align: left; }
+    .privacy-points div { background: #fbf6f1; border-radius: var(--radius-card); padding: 20px; }
+    .privacy-points h3 { font-size: 1rem; margin-bottom: 6px; }
+    .privacy-points p { font-size: 0.9rem; color: var(--text-secondary); }
+    .pricing { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 640px; margin: 24px auto 0; }
+    .pricing div { border: 1px solid #f1e4ea; border-radius: var(--radius-card); padding: 24px; }
+    .pricing h3 { margin-bottom: 4px; }
+    .pricing .price { font-size: 1.4rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px; }
+    .pricing ul { padding-left: 18px; color: var(--text-secondary); font-size: 0.92rem; }
+    .support { max-width: 760px; margin: 0 auto; }
+    .support h3 { margin-top: 20px; font-size: 1.05rem; }
+    .support p, .support li { color: var(--text-secondary); }
+    .support ul { padding-left: 20px; margin-top: 8px; }
+    .policy-callout { background: #fdf2f6; border-left: 4px solid var(--primary); padding: 14px 18px; margin: 18px 0; border-radius: 6px; font-size: 15px; color: var(--text); }
+    @media (max-width: 680px) {
+      .privacy-points, .pricing { grid-template-columns: 1fr; }
+      .shots img { flex-basis: 190px; width: 190px; }
+    }
   </style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="container">
-    <a href="../index.html" class="nav-brand"><img src="../logo.png" alt="Journex logo" class="nav-logo">journex.io</a>
+    <a href="../index.html" class="nav-brand"><img src="../logo.png" alt="journex.io logo" class="nav-logo">journex.io</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
-      <li><a href="index.html">Retro for Two</a></li>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="../index.html">Gratitude app</a></li>
     </ul>
   </div>
 </nav>
 
-<main class="policy-page">
-  <div class="container" style="max-width:760px;">
-    <div class="app-head"><img src="icon.png" alt="Retro for Two icon"><h1 style="margin:0">Retro for Two</h1></div>
-    <p class="policy-date">Regular, kind check-ins for a healthier relationship</p>
-
-    <p>Retro for Two helps couples hold a short, structured conversation on a regular rhythm. You each answer a few questions privately, talk them through together, agree on one to three small things to try, and finish with appreciation.</p>
-
-    <h2>Contact us</h2>
-    <p>Questions, problems or feedback: <a href="mailto:support@hg-au.com">support@hg-au.com</a>. We aim to reply within two business days.</p>
-
-    <h2>Common questions</h2>
-    <h3>Where is my data stored?</h3>
-    <p>Only on your phone. There's no account and no cloud, so we can't see your retros. Deleting the app deletes its data, apart from any device backup you've made (for example iCloud or Google backup).</p>
-    <h3>Why did my written answers disappear?</h3>
-    <p>By default, written answers are cleared when a retro ends; check-in scores, agreed actions and appreciations are kept. You can choose to keep answers in Settings &rarr; Privacy.</p>
-    <h3>Can we use it on two phones?</h3>
-    <p>Retros are designed for one phone, passed between you. Either partner can also use "Just me" mode on their own phone to prepare notes.</p>
-    <h3>How do I restore Pro on a new phone?</h3>
-    <p>Open Settings &rarr; Restore purchases, signed in to the same Apple or Google account you bought with.</p>
-    <h3>How do I cancel a subscription?</h3>
-    <p>iPhone: Settings &rarr; your name &rarr; Subscriptions. Android: Google Play &rarr; profile &rarr; Payments &amp; subscriptions &rarr; Subscriptions. Cancel at least 24 hours before renewal.</p>
-    <h3>How do I erase everything?</h3>
-    <p>Settings &rarr; Erase everything. This can't be undone.</p>
-
-    <h2>If a conversation doesn't feel safe</h2>
-    <div class="policy-callout">Retro for Two is a conversation tool, not therapy. If you feel afraid of your partner, please skip the retro and reach out for support.</div>
-    <ul>
-      <li><strong>1800RESPECT</strong> (Australia, 24/7): <a href="tel:1800737732">1800 737 732</a></li>
-      <li><strong>Lifeline</strong> (Australia, 24/7): <a href="tel:131114">13 11 14</a></li>
-      <li><strong>Relationships Australia</strong>: <a href="tel:1300364277">1300 364 277</a></li>
-      <li>Outside Australia: call your local emergency number or visit <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a></li>
-    </ul>
-
+<header class="hero">
+  <div class="container">
+    <img src="icon.png" alt="Retro for Two app icon" class="hero-logo">
+    <h1>Retro for <span>Two</span></h1>
+    <p class="hero-tagline">Kind, regular check-ins for a healthier relationship. Notice what's working, talk through what isn't, and agree on one small thing to try.</p>
+    <div class="hero-actions">
+      <span class="soon">Coming soon to the App Store and Google Play</span>
+    </div>
+    <p class="hero-note">Private by design: everything stays on your phone.</p>
   </div>
-</main>
+</header>
+
+<section id="how-it-works" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">How a retro works</h2>
+    <p class="section-subtitle">Fifteen to forty-five minutes, on a rhythm you choose: weekly, fortnightly, monthly or every three months.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Answer privately</h3>
+        <p>Pass the phone. Each of you checks in and answers a few questions, one thing per answer, said with care.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Talk it through</h3>
+        <p>Reveal answers one at a time. One shares, the other listens and reflects back before replying.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Agree and appreciate</h3>
+        <p>Pick one to three small actions to try before next time, then end by telling each other what you're grateful for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="screenshots" style="background: linear-gradient(180deg, #fbf6f1 0%, #fff 100%);">
+  <div class="container">
+    <h2 class="section-title">A look inside</h2>
+    <p class="section-subtitle">Swipe or scroll to see more.</p>
+    <div class="shots" tabindex="0" aria-label="App screenshots">
+      <img src="shot-01-home.jpg" alt="Home screen showing the next retro, actions to try and last appreciations" loading="lazy">
+      <img src="shot-02-talk.jpg" alt="Talk it through: both partners' answers revealed one at a time" loading="lazy">
+      <img src="shot-03-private.jpg" alt="Answering a question privately" loading="lazy">
+      <img src="shot-04-nudge.jpg" alt="Gentle nudges suggesting kinder wording" loading="lazy">
+      <img src="shot-05-checkin.jpg" alt="Check-in scores side by side, with gaps marked worth a chat" loading="lazy">
+      <img src="shot-06-agree.jpg" alt="Agreeing on small actions" loading="lazy">
+      <img src="shot-07-trends.jpg" alt="Trends over past retros" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="features" class="rft-features" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">Built to keep it kind</h2>
+    <p class="section-subtitle">Good habits for hard conversations, built into every retro.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F49B;</div>
+        <h3>Starts warm, ends hopeful</h3>
+        <p>Every retro opens with appreciation and closes with something to look forward to.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x261D;&#xFE0F;</div>
+        <h3>One thing at a time</h3>
+        <p>One issue per answer, so nobody feels ambushed by a list.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F4A1;</div>
+        <h3>Gentle nudges</h3>
+        <p>Spots "always", "never" and labels, and suggests saying how you feel instead.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x23F8;&#xFE0F;</div>
+        <h3>Pause button</h3>
+        <p>Feeling flooded? Take a 20-minute break. Your retro is saved.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F4AC;</div>
+        <h3>100 fresh questions</h3>
+        <p>Ten themes, from fun and affection to money and the future, rotated so retros stay fresh.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#x1F514;</div>
+        <h3>Your rhythm</h3>
+        <p>Choose how often, which day and what time. Reminders are worded discreetly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" style="background: linear-gradient(180deg, #fff 0%, #fbf6f1 100%);">
+  <div class="container">
+    <h2 class="section-title">Private by design</h2>
+    <p class="section-subtitle">What you say about your relationship is nobody else's business, including ours.</p>
+    <div class="privacy-points">
+      <div><h3>On your phone only</h3><p>No account, no cloud, no tracking. We can't see your retros.</p></div>
+      <div><h3>Keep the outcome</h3><p>By default, written answers are cleared after each retro. Scores, actions and appreciations are kept.</p></div>
+      <div><h3>Lock it</h3><p>Optional Face ID, Touch ID or fingerprint lock to open the app.</p></div>
+    </div>
+    <p style="text-align:center; margin-top:24px;"><a href="privacy.html" class="btn-primary">Read the privacy policy</a></p>
+  </div>
+</section>
+
+<section id="pricing" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">Free to start</h2>
+    <p class="section-subtitle">The full retro is free. Pro adds depth. One purchase covers you both.</p>
+    <div class="pricing">
+      <div>
+        <h3>Free</h3>
+        <p class="price">A$0</p>
+        <ul><li>The complete retro</li><li>30 starter questions</li><li>Reminders and history</li></ul>
+      </div>
+      <div>
+        <h3>Pro</h3>
+        <p class="price">A$29.99/yr or A$99.99 once</p>
+        <ul><li>All 100 questions</li><li>Focus retros by theme</li><li>Your own questions</li><li>Trends over time</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="support" style="background:#fbf6f1;">
+  <div class="container">
+    <div class="support">
+      <h2 class="section-title">Support</h2>
+      <p style="text-align:center;">Questions, problems or feedback: <a href="mailto:support@hg-au.com" style="color:var(--primary-dark); font-weight:600;">support@hg-au.com</a>. We aim to reply within two business days.</p>
+
+      <h3>Where is my data stored?</h3>
+      <p>Only on your phone. There's no account and no cloud, so we can't see your retros. Deleting the app deletes its data, apart from any device backup you've made (for example iCloud or Google backup).</p>
+      <h3>Why did my written answers disappear?</h3>
+      <p>By default, written answers are cleared when a retro ends; check-in scores, agreed actions and appreciations are kept. You can choose to keep answers in Settings &rarr; Privacy.</p>
+      <h3>Can we use it on two phones?</h3>
+      <p>Retros are designed for one phone, passed between you. Either partner can also use "Just me" mode on their own phone to prepare notes.</p>
+      <h3>How do I restore Pro on a new phone?</h3>
+      <p>Open Settings &rarr; Restore purchases, signed in to the same Apple or Google account you bought with.</p>
+      <h3>How do I cancel a subscription?</h3>
+      <p>iPhone: Settings &rarr; your name &rarr; Subscriptions. Android: Google Play &rarr; profile &rarr; Payments &amp; subscriptions &rarr; Subscriptions. Cancel at least 24 hours before renewal.</p>
+      <h3>How do I erase everything?</h3>
+      <p>Settings &rarr; Erase everything. This can't be undone.</p>
+
+      <h3>If a conversation doesn't feel safe</h3>
+      <div class="policy-callout">Retro for Two is a conversation tool, not therapy. If you feel afraid of your partner, please skip the retro and reach out for support.</div>
+      <ul>
+        <li><strong>1800RESPECT</strong> (Australia, 24/7): <a href="tel:1800737732">1800 737 732</a></li>
+        <li><strong>Lifeline</strong> (Australia, 24/7): <a href="tel:131114">13 11 14</a></li>
+        <li><strong>Relationships Australia</strong>: <a href="tel:1300364277">1300 364 277</a></li>
+        <li>Outside Australia: call your local emergency number or visit <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
     <p>&copy; 2026 Holistic Governance Pty Ltd (ABN 52 698 725 558). All rights reserved.</p>
     <div class="footer-links">
-      <a href="index.html">Retro for Two</a>
+      <a href="../index.html">journex.io</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Use</a>
     </div>
